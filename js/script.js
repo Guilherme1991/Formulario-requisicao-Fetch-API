@@ -1,4 +1,4 @@
-let form = document.getElementById('form'),
+       let form = document.getElementById('form'),
        name = document.getElementById('nome'),
        job = document.getElementById('job'),
        btn = document.querySelector('.submit')

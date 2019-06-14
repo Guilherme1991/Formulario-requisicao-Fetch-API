@@ -13,23 +13,33 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 500px;
+    width: 460px;
     background-color: #e7e7e7;
+    border-radius: 10px;
+    border: 2px solid #5894da;
 }
 #form input{
     width: 450px;
 }
 #form input, img{
-    margin: 10px;
+    margin: 5px 10px;
 }
 .submit{
-    background-color: #5894da;
-    color: white;
+    background-color: #f8f8f8;
+    color: #5894da;
+    height: 30px;
+    border:1px solid #5894da;
+    border-radius: 5px;
+}
+.submit:hover{
+    background-color:#5894da;
+    color: #f8f8f8;
+
 }
 .ativa{
     background-color: #5894da;
-    width: 500px;
-    height: 200px;
+    width: 460px;
+    height: 80px;
     margin: 10;
     padding: 10px;
     color: white;
