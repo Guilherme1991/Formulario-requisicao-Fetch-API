@@ -1,0 +1,36 @@
+body{
+    font-family: 'Indie Flower', cursive;
+    background-color: #8fbaec;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+}
+#form{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 500px;
+    background-color: #e7e7e7;
+}
+#form input{
+    width: 450px;
+}
+#form input, img{
+    margin: 10px;
+}
+.submit{
+    background-color: #5894da;
+    color: white;
+}
+.ativa{
+    background-color: #5894da;
+    width: 500px;
+    height: 200px;
+    margin: 10;
+    padding: 10px;
+    color: white;
+}
