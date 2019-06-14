@@ -43,4 +43,14 @@ body{
     margin: 10;
     padding: 10px;
     color: white;
+    animation-duration: 1s;
+    animation-name: ativo;
+}
+@keyframes ativo{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
 }
