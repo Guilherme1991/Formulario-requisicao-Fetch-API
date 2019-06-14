@@ -1,6 +1,7 @@
-       let form = document.getElementById('form'),
+let form = document.getElementById('form'),
        name = document.getElementById('nome'),
-       job = document.getElementById('job')
+       job = document.getElementById('job'),
+       btn = document.querySelector('.submit')
 
        form.addEventListener('submit', function(event){
          event.preventDefault()
@@ -14,6 +15,7 @@
             adiciona.innerHTML='<p>Você precisa digitar nos campos do formulário!!</p>';
             adiciona.classList.add('ativa')
             form.appendChild(adiciona)
+            btn.setAttribute('disabled', 'disabled');
         }
         console.log(dados)
 
@@ -30,6 +32,7 @@
                 adiciona.innerHTML='<p>Olá '+dados.nome+', Seu Job é: '+dados.job+',<br>seus dados foram enviados com sucesso!!</p>';
                 adiciona.classList.add('ativa')
                 form.appendChild(adiciona)
+                btn.setAttribute('disabled', 'disabled');
                 return response.json()
              } 
              else{
@@ -37,6 +40,7 @@
                 adiciona.classList.add('ativa')
                 adiciona.innerHTML='<p>Olá '+dados.nome+', Seu Job é: '+dados.job+',<br>Infelizmente não foi possivel enviar sua solicitação<br>Contate: gui23091991@gmail.com</p>';
                 form.appendChild(adiciona)
+                btn.setAttribute('disabled', 'disabled');
                 return response.json()
 
                 }
