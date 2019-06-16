@@ -7,33 +7,34 @@ body{
     justify-content: center;
     margin:0;
     padding:0;
-    height: 100%;
 }
 #form{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     color: white;
     padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
     width: 400px;
-    height: 100%;
     background-color: #14141400;
     border: 1px solid #5895da8e;
 }
-#form input{
+.formula input{
     width: 400px;
     height: 30px;
+    margin: 15px 0px;
 }
-#form input, img{
+#form img{
     margin: 5px 10px;
 }
+
 .submit{
-    background-color: #f8f8f8;
-    color: #5894da;
+    background-color: #5895da9d;
+    color: #a5cdfa;
     height: 30px;
     border:1px solid #5894da;
     border-radius: 5px;
+    margin: 7px 0px !important;
 }
 .submit:hover{
     background-color:#5894da;
@@ -59,11 +60,7 @@ body{
 #container h1,h2,p{
     color:white;
 }
-#formulario{
-    height:600px;
-    background-color: #14141400;
-    margin: 30px 20px;
-}
+
 @keyframes text{
     from{
         opacity: 0;
@@ -88,5 +85,19 @@ body{
         height:400px;
         background-color: #14141400;
         margin: 0px 0px;
+    }
+    #form{
+        margin:5px;
+        width: 250px;
+    }
+    .formula input{
+        width: 250px;
+        height: 25px;
+        margin: 10px 0px;
+    }
+    .ativa{
+        background-color: #5895daaf;
+        width: 250px;
+        height: 80px; 
     }
 }
