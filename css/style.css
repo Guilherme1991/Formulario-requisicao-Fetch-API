@@ -1,25 +1,29 @@
 body{
     font-family: 'Indie Flower', cursive;
-    background-color: #8fbaec;
+    background-image: url('../img/universe.jpg');
+    background: cover;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
+    margin:0;
+    padding:0;
     height: 100%;
 }
 #form{
+    color: white;
     padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 460px;
-    background-color: #e7e7e7;
-    border-radius: 10px;
-    border: 2px solid #5894da;
+    width: 400px;
+    height: 100%;
+    background-color: #14141400;
+    border: 1px solid #5895da8e;
 }
 #form input{
-    width: 450px;
+    width: 400px;
+    height: 30px;
 }
 #form input, img{
     margin: 5px 10px;
@@ -37,8 +41,8 @@ body{
 
 }
 .ativa{
-    background-color: #5894da;
-    width: 460px;
+    background-color: #5895daaf;
+    width: 400px;
     height: 80px;
     margin: 10;
     padding: 10px;
@@ -46,11 +50,43 @@ body{
     animation-duration: 1s;
     animation-name: ativo;
 }
+#container{
+    flex: 2;
+    padding:0px 40px;
+    animation-duration: 5s;
+    animation-name: text;
+}
+#container h1,h2,p{
+    color:white;
+}
+#formulario{
+    height:600px;
+    background-color: #14141400;
+    margin: 30px 20px;
+}
+@keyframes text{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
 @keyframes ativo{
     from{
         opacity: 0;
     }
     to{
         opacity: 1;
+    }
+}
+@media only screen and (max-width: 800px){
+    body{
+        flex-direction: column;
+    }
+    #formulario{
+        height:400px;
+        background-color: #14141400;
+        margin: 0px 0px;
     }
 }

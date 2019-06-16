@@ -1,11 +1,11 @@
        let form = document.getElementById('form');
        let btn = document.querySelector('.submit');
-
-       form.addEventListener('submit', function(event){
+      
+       form.addEventListener('submit', event =>{
         let name = document.getElementById('nome');
         let job = document.getElementById('job');
         let adiciona = document.createElement('div');
-
+         //Previne a atualizaçao do Browser!
          event.preventDefault()
 
         let dados ={
@@ -19,17 +19,19 @@
              body: JSON.stringify(dados)
          })
 
-         .then(function(response){ 
+         .then(response=>{ 
             if(nome.value =='' || job.value ==''){
-            let adiciona = document.createElement('div')
-            adiciona.innerHTML='<p>Você precisa digitar nos campos do formulário!!</p>';
-            adiciona.classList.add('ativa')
-            form.appendChild(adiciona)
-            btn.setAttribute('disabled', 'disabled')
+               name.style.border="1px solid red";
+               job.style.border="1px solid red";
+               let adiciona = document.createElement('div')
+               adiciona.innerHTML='<p>Você precisa digitar nos campos do formulário!!</p>';
+               adiciona.classList.add('ativa')
+               form.appendChild(adiciona)
+               btn.setAttribute('disabled', 'disabled')
              }
              // Se o status da requisição for estritamente igual!
              else if(response.status === 201){
-                adiciona.innerHTML='<p>Olá '+dados.nome+', Seu Job é: '+dados.job+',<br>seus dados foram enviados com sucesso!!</p>';
+                adiciona.innerHTML='<p>Olá '+dados.nome+',<br>seus dados foram enviados com sucesso!!</p>';
                 adiciona.classList.add('ativa')
                 form.appendChild(adiciona)
                 btn.setAttribute('disabled', 'disabled')
@@ -44,7 +46,7 @@
                 }      
          })
          //Retorna a resposta do Servidor no DevTools!
-         .then(function(response){
+         .then(response=>{
              console.log(response)
          })
        })
