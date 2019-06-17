@@ -120,16 +120,19 @@ body{
     }
     #form{
         margin:5px;
-        width: 250px;
+        width: 270px;
+    }
+    #first{
+       flex-direction: column; 
     }
     .formula input{
-        width: 250px;
-        height: 25px;
+        width: 270px;
+        height: 27px;
         margin: 10px 0px;
     }
     .ativa{
         background-color: #5895daaf;
-        width: 250px;
+        width: 270px;
         height: 80px; 
     }
 }
